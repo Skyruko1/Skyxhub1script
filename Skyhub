@@ -1,0 +1,40 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+ Window = OrionLib:MakeWindow({Name = "SkyXscript", HidePremium = false, Introtext = "SkySscript", SaveConfig = true, ConfigFolder = "SkyXscript"})
+
+OrionLib:MakeNotification({
+	Name = "Hello!",
+	Content = "Welcome to SkyXscript!",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+
+local TutTab = Window:MakeTab({
+	Name = "SkyXscript",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = TutTab:AddSection({
+	Name = "SkyXscript Section"
+})
+
+TutTab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+      		print("Clicked!")
+  	end    
+})
+
+TutTab:AddButton({
+Name = "Infinite Yield",
+Callback = function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+        print("Clicked!")
+  end    
+})
+
+
+OrionLib:Init()
